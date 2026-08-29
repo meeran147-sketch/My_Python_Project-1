@@ -15,7 +15,7 @@ The objective of this project is to analyze coffee sales data using Python and c
 - How can data visualization help in understanding coffee sales performance?
 
   
-- Dashboard Interaction <a href="https://github.com/meeran147-sketch/Online-Sales-Performance-Dashboard/blob/main/DASHBOARD_3.xlsx">View Dashboard</a>
+  - Code  access <a https://github.com/meeran147-sketch/My_Python_Project-1/blob/main/Python_Project_Code">View Dashboard</a>
 
 ## Process
 
