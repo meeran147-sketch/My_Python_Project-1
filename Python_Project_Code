@@ -1,0 +1,73 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+from matplotlib.pyplot import tight_layout
+import seaborn as sns
+
+# Read Excel file
+df = pd.read_excel("Coffee.xlsx")
+
+# Display the data
+print(df)
+
+# Create a 2x3 subplot layout
+plt.figure(figsize=(15, 10))
+
+# 1. Total Sales by Product Category
+plt.subplot(2, 3, 1)
+plt.plot(df.groupby("Product Category")["Total Sales"].sum())
+plt.title("Total Sales by Product Category")
+plt.xlabel("Product Category")
+plt.ylabel("Total Sales")
+
+# 2. Quantity by Product Name
+plt.subplot(2, 3, 2)
+plt.hist(df.groupby("Product Name")["Quantity"].sum())
+plt.title("Quantity by Product Name")
+plt.xlabel("Product Name")
+plt.ylabel("Quantity")
+
+# 3. Product Category by Total Sales
+plt.subplot(2, 3, 3)
+sns.scatterplot(
+    x=df.groupby("Product Category")["Total Sales"].sum().index,
+    y=df.groupby("Product Category")["Total Sales"].sum().values
+)
+plt.title("Product Category by Total Sales")
+plt.xlabel("Product Category")
+plt.ylabel("Total Sales")
+
+# 4. Product Category by Quantity
+plt.subplot(2, 3, 4)
+sns.boxplot(
+    x=df["Product Name"],
+    y=df["Quantity"]
+)
+plt.title("Product Category by Quantity")
+plt.xlabel("Product Category")
+plt.ylabel("Quantity")
+plt.xticks(rotation=45)
+
+# 5. Product Category by Quantity
+plt.subplot(2, 3, 5)
+sns.barplot(
+    x=df.groupby("Product Category")["Quantity"].mean().index,
+    y=df.groupby("Product Category")["Quantity"].mean().values
+)
+plt.title("Product Category by Quantity")
+plt.xlabel("Product Category")
+plt.ylabel("Quantity")
+plt.xticks(rotation=45)
+
+# 6. Product Name by Unit Price
+plt.subplot(2, 3, 6)
+plt.plot(df.groupby("Product Name")["Unit Price"].sum())
+plt.title("Product Name by Unit Price")
+plt.xlabel("Product Name")
+plt.ylabel("Unit Price")
+plt.xticks(rotation=45)
+
+# Adjust layout
+tight_layout()
+
+# Display all visualizations
+plt.show()
