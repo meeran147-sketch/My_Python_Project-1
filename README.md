@@ -2,7 +2,7 @@
 ## Project Objective
 The objective of this project is to analyze coffee sales data using Python and create meaningful visualizations. The project uses **Pandas, Matplotlib, and Seaborn** to explore sales, product categories, quantities, and unit prices.The visualizations provide a clear understanding of **sales performance, product trends, quantity distribution, and pricing**, helping to transform raw data into useful and easy-to-understand insights.This project demonstrates practical skills in **data analysis, data visualization, Python programming, and exploratory data analysis (EDA)**.
 ## Dataset used
-- <a href="https://github.com/meeran147-sketch/Online-Sales-Performance-Dashboard/blob/main/Dashboard%202_Dataset.xlsx">Dataset</a>
+- <a href="https://github.com/meeran147-sketch/My_Python_Project-1/blob/main/Coffee_Shop_Sales_Dataset.xlsx">Dataset</a>
 
 ## Question
 - Which product category generates the highest total sales?
